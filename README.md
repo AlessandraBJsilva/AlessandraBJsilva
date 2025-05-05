@@ -3,7 +3,7 @@
 - 👀 Estou interessada em **desenvolvimento de sistemas**, especialmente nas áreas de **JavaScript**, **Python** e **HTML**.
 - 🌱 Atualmente estou estudando **Análise e Desenvolvimento de Sistemas**.
 - 💞️ Quero colaborar com **projetos ** para ganhar experiência prática.
-- 📫 Você pode me contatar pelo e-mail: **[seu.email@exemplo.com]**
+- 📫 Você pode me contatar pelo e-mail: **alessandrabjsilva1@gmail.com**
 - 😄 Pronomes: **[ela/dela]**
 - ⚡ Curiosidade: Gosto de **aprender praticando** e me esforço para entender bem antes de executar.
 
