@@ -1,14 +1,19 @@
-# 👋 Oi, eu sou a Alessandra Barbosa
+# 👋 Olá! Eu sou a Alessandra Barbosa
 
-- 👀 Estou interessada em **desenvolvimento de sistemas**, especialmente nas áreas de **JavaScript**, **Python** e **HTML**.
-- 🌱 Atualmente estou estudando **Análise e Desenvolvimento de Sistemas**.
-- 💞️ Quero colaborar com **projetos ** para ganhar experiência prática.
-- 📫 Você pode me contatar pelo e-mail: **alessandrabjsilva1@gmail.com**
-- 😄 Pronomes: **[ela/dela]**
-- ⚡ Curiosidade: Gosto de **aprender praticando** e me esforço para entender bem antes de executar.
+🎓 Estudante de **Análise e Desenvolvimento de Sistemas**  
+💻 Atualmente me aprofundando em **JavaScript**, além de aprender **Python**, **HTML**, **PHP**, **MySQL** e **Linux**  
+🤝 Buscando colaborar com **projetos iniciantes**, especialmente em **JavaScript**  
+📫 Contato: **alessandrabjsilva1@gmail.com**  
+😄 Pronomes: **ela/dela**  
+⚡ Curiosidade: Gosto de aprender praticando e sempre tento entender bem antes de colocar a mão na massa!
 
+---
 
-<!---
-AlessandraBJsilva/AlessandraBJsilva is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+## 🚀 Tecnologias que estou aprendendo:
+- **JavaScript** (principal foco)
+- Python
+- HTML e CSS
+- PHP
+- MySQL
+- Linux
+- Git e GitHub
