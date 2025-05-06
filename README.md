@@ -17,7 +17,7 @@ JavaScript – Lógica de programação e interatividade em páginas web
 
 PHP – Back-end básico e integração com banco de dados
 
-Python – Scripts de automação e análise de dados (Pandas, Jupyter)
+Python – Scripts de automação e análise de dados
 
 HTML e CSS – Estrutura e estilo de páginas
 
@@ -37,7 +37,7 @@ Estrutura de tabelas para um sistema de agendamentos
 
 Normalização e integridade dos dados
 
-Consultas SQL com JOIN, GROUP BY, e HAVING
+Consultas SQL
 
 Análise de Dados com Python
 Limpeza e visualização de dados de vendas
