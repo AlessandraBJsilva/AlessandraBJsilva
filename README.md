@@ -1,4 +1,4 @@
-# 👋 Olá! Eu sou a Alessandra Barbosa
+👋 Olá! Eu sou a Alessandra Barbosa
 
 🎓 Estudante de **Análise e Desenvolvimento de Sistemas**  
 💻 Atualmente me aprofundando em **JavaScript**, além de aprender **Python**, **HTML**, **PHP**, **MySQL** e **Linux**  
