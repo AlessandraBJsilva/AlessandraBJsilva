@@ -4,8 +4,7 @@ Sou uma profissional multidisciplinar em transição para a área de tecnologia,
 
 ## 👩‍💻 Sobre mim
 
-- Bombeira civil e analista de dados  
-- Terapeuta tântrica e massagista profissional, com abordagem terapêutica e empática  
+- Bombeira civil e analista de dados    
 - Estudante de **Análise e Desenvolvimento de Sistemas**  
 - Participando de um projeto de banco de dados com foco em **MySQL** e desenvolvimento web  
 - Interesse crescente em **back-end**, **bancos de dados** e **automação de processos**  
