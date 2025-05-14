@@ -1,6 +1,6 @@
 # Olá! Eu sou a Alessandra Barbosa
 
-Sou uma profissional multidisciplinar em transição para a área de tecnologia, unindo minha experiência prática com minha paixão por dados e desenvolvimento de sistemas. Tenho uma trajetória diversa como bombeira civil, massagista e analista de dados, agora focada no universo da tecnologia e programação.
+Sou uma profissional multidisciplinar em transição para a área de tecnologia, unindo minha experiência prática com minha paixão por dados e desenvolvimento de sistemas. Tenho uma trajetória diversa como bombeira civil e analista de dados, agora focada no universo da tecnologia e programação.
 
 ---
 
