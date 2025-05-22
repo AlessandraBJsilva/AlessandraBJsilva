@@ -1,60 +1,50 @@
-# Olá! Eu sou a Alessandra Barbosa
+import pygame
+import sys
 
-Sou uma profissional multidisciplinar em transição para a área de tecnologia, unindo minha experiência prática com minha paixão por dados e desenvolvimento de sistemas. Tenho uma trajetória diversa como bombeira civil e analista de dados, agora focada no universo da tecnologia e programação.
+# Inicializa o Pygame
+pygame.init()
 
----
+# Tamanho da Tela
+largura = 500
+altura = 500
+tela = pygame.display.set_mode((largura, altura))
+pygame.display.set_caption("Jogo Simples")
 
-## 👩‍💻 Sobre mim
+# Cores
+branco = (255, 255, 255)
+vermelho = (255, 0, 0)
 
-- Bombeira Civil e Analista de Dados  
-- Estudante de Análise e Desenvolvimento de Sistemas  
-- Participante de projeto com foco em **banco de dados (MySQL)** e **desenvolvimento web**  
-- Interesse crescente em **back-end**, **bancos de dados** e **automação de processos**  
-- Praticante de boxe chinês e jiu-jitsu – disciplina e estratégia também fazem parte da minha vida profissional  
-- Acredito que a tecnologia pode transformar vidas e busco sempre aprender com propósito e foco  
-- Adoro trabalhar em equipe e estou aberta a colaborar em projetos iniciantes  
+# Posição Inicial do quadrado
+x = 200
+y = 200
+velocidade = 5
+tamanho = 50
 
----
+# Loop do jogo
+rodando = True
+while rodando:
+    pygame.time.delay(30)
 
-## 🚀 Tecnologias que estou aprendendo e praticando
+    for evento in pygame.event.get():
+        if evento.type == pygame.QUIT:
+            rodando = False
 
-- **MySQL** – Criação de tabelas, consultas, relacionamentos e scripts  
-- **JavaScript** – Lógica de programação e interatividade  
-- **PHP** – Back-end básico e integração com banco de dados  
-- **Python** – Scripts de automação e análise de dados  
-- **HTML e CSS** – Estruturação e estilização de páginas  
-- **Linux** – Comandos básicos no terminal  
-- **Git e GitHub** – Controle de versão e colaboração em projetos  
+    # Movimentação
+    teclas = pygame.key.get_pressed()
+    if teclas[pygame.K_LEFT]:
+        x -= velocidade
+    if teclas[pygame.K_RIGHT]:
+        x += velocidade
+    if teclas[pygame.K_UP]:
+        y -= velocidade
+    if teclas[pygame.K_DOWN]:
+        y += velocidade
 
----
+    # Atualiza tela
+    tela.fill(branco)
+    pygame.draw.rect(tela, vermelho, (x, y, tamanho, tamanho))
+    pygame.display.update()
 
-## 💼 Projetos em destaque
-
-### 🗂️ Sistema de Cadastro de Clientes (em desenvolvimento)  
-**Tecnologias:** PHP, MySQL, HTML/CSS  
-**Descrição:** CRUD simples para praticar integração entre front-end e banco de dados  
-**Funcionalidades:** Cadastro, listagem, edição e exclusão de clientes com validação básica  
-**Objetivo:** Entender o fluxo completo de um sistema com back-end e banco de dados relacional
-
-### 🛠️ Banco de Dados com MySQL  
-- Estruturação de tabelas para um sistema de agendamentos  
-- Aplicação de normalização e integridade referencial  
-- Elaboração de consultas SQL  
-
-### 📊 Análise de Dados com Python  
-- Limpeza e visualização de dados de vendas utilizando bibliotecas como Pandas e Matplotlib  
-
----
-
-## ✨ Curiosidades
-
-- Praticante de boxe chinês e jiu-jitsu  
-- Gosto de rock clássico, artes marciais e cervejas artesanais  
-- Discreta, divertida e apaixonada por aprendizado constante  
-
----
-
-## 📫 Contato
-
-- **Email:** alessandrabjsilva1@gmail.com  
-- **Pronomes:** ela/dela
+# Encerra o jogo
+pygame.quit()
+sys.exit()
