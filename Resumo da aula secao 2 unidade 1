@@ -1,0 +1,138 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMJcsNAGE1hN03iQC6FAavm",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/AlessandraBJsilva/AlessandraBJsilva/blob/main/Resumo%20da%20aula%20secao%202%20unidade%201\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "fZi_NDSaSTIf",
+        "outputId": "c24b85e1-235e-4fb3-c5e1-90638787049f"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Simulação do Circuito de Votação (A, B, C -> Resultado Esperado | Resultado do Código)\n",
+            "----------------------------------------------------------------------\n",
+            "Votos: (1, 1, 1) -> Esperado: 1 | Calculado: 1 (OK)\n",
+            "Votos: (1, 1, 0) -> Esperado: 1 | Calculado: 1 (OK)\n",
+            "Votos: (1, 0, 1) -> Esperado: 1 | Calculado: 1 (OK)\n",
+            "Votos: (1, 0, 0) -> Esperado: 0 | Calculado: 0 (OK)\n",
+            "Votos: (0, 1, 1) -> Esperado: 0 | Calculado: 0 (OK)\n",
+            "Votos: (0, 1, 0) -> Esperado: 0 | Calculado: 0 (OK)\n",
+            "Votos: (0, 0, 1) -> Esperado: 0 | Calculado: 0 (OK)\n",
+            "Votos: (0, 0, 0) -> Esperado: 0 | Calculado: 0 (OK)\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Este código não foi fornecido nas fontes, mas ilustra a lógica do circuito de votação\n",
+        "# descrito no material.\n",
+        "\n",
+        "def simular_votacao(voto_A, voto_B, voto_C):\n",
+        "    \"\"\"\n",
+        "    Simula o circuito de votação do comitê de uma multinacional.\n",
+        "\n",
+        "    O projeto é aprovado se o diretor executivo (voto_A) votar a favor (1)\n",
+        "    E obtiver maioria (pelo menos um dos vice-diretores, voto_B ou voto_C, votar a favor).\n",
+        "\n",
+        "    Args:\n",
+        "        voto_A (int): Voto do Diretor Executivo (1 para a favor, 0 para contra).\n",
+        "        voto_B (int): Voto do Vice-Diretor Financeiro (1 para a favor, 0 para contra).\n",
+        "        voto_C (int): Voto do Vice-Diretor de Relações Institucionais (1 para a favor, 0 para contra).\n",
+        "\n",
+        "    Returns:\n",
+        "        int: 1 se o projeto for aprovado (luz acesa), 0 caso contrário (luz apagada).\n",
+        "    \"\"\"\n",
+        "    # A lógica é: (A AND (B OR C))\n",
+        "    # O diretor executivo (A) deve votar a favor (voto_A == 1)\n",
+        "    # E (AND) pelo menos um dos vice-diretores (B ou C) deve votar a favor (voto_B == 1 OR voto_C == 1)\n",
+        "\n",
+        "    # Converte os votos para valores booleanos (True/False)\n",
+        "    A = bool(voto_A)\n",
+        "    B = bool(voto_B)\n",
+        "    C = bool(voto_C)\n",
+        "\n",
+        "    # Aplica a lógica Booleana: A E (B OU C)\n",
+        "    projeto_aprovado = A and (B or C)\n",
+        "\n",
+        "    # Retorna 1 se aprovado (True), 0 se não (False)\n",
+        "    return 1 if projeto_aprovado else 0\n",
+        "\n",
+        "# --- Exemplos de uso e verificação com a tabela-verdade da fonte ---\n",
+        "\n",
+        "print(\"Simulação do Circuito de Votação (A, B, C -> Resultado Esperado | Resultado do Código)\")\n",
+        "print(\"-\" * 70)\n",
+        "\n",
+        "# Teste 1: A=1, B=1, C=1 -> Esperado: 1\n",
+        "votos = (1, 1, 1)\n",
+        "resultado = simular_votacao(*votos)\n",
+        "print(f\"Votos: {votos} -> Esperado: 1 | Calculado: {resultado} {'(OK)' if resultado == 1 else '(FALHA)'}\")\n",
+        "\n",
+        "# Teste 2: A=1, B=1, C=0 -> Esperado: 1\n",
+        "votos = (1, 1, 0)\n",
+        "resultado = simular_votacao(*votos)\n",
+        "print(f\"Votos: {votos} -> Esperado: 1 | Calculado: {resultado} {'(OK)' if resultado == 1 else '(FALHA)'}\")\n",
+        "\n",
+        "# Teste 3: A=1, B=0, C=1 -> Esperado: 1\n",
+        "votos = (1, 0, 1)\n",
+        "resultado = simular_votacao(*votos)\n",
+        "print(f\"Votos: {votos} -> Esperado: 1 | Calculado: {resultado} {'(OK)' if resultado == 1 else '(FALHA)'}\")\n",
+        "\n",
+        "# Teste 4: A=1, B=0, C=0 -> Esperado: 0\n",
+        "votos = (1, 0, 0)\n",
+        "resultado = simular_votacao(*votos)\n",
+        "print(f\"Votos: {votos} -> Esperado: 0 | Calculado: {resultado} {'(OK)' if resultado == 0 else '(FALHA)'}\")\n",
+        "\n",
+        "# Teste 5: A=0, B=1, C=1 -> Esperado: 0\n",
+        "votos = (0, 1, 1)\n",
+        "resultado = simular_votacao(*votos)\n",
+        "print(f\"Votos: {votos} -> Esperado: 0 | Calculado: {resultado} {'(OK)' if resultado == 0 else '(FALHA)'}\")\n",
+        "\n",
+        "# Teste 6: A=0, B=1, C=0 -> Esperado: 0\n",
+        "votos = (0, 1, 0)\n",
+        "resultado = simular_votacao(*votos)\n",
+        "print(f\"Votos: {votos} -> Esperado: 0 | Calculado: {resultado} {'(OK)' if resultado == 0 else '(FALHA)'}\")\n",
+        "\n",
+        "# Teste 7: A=0, B=0, C=1 -> Esperado: 0\n",
+        "votos = (0, 0, 1)\n",
+        "resultado = simular_votacao(*votos)\n",
+        "print(f\"Votos: {votos} -> Esperado: 0 | Calculado: {resultado} {'(OK)' if resultado == 0 else '(FALHA)'}\")\n",
+        "\n",
+        "# Teste 8: A=0, B=0, C=0 -> Esperado: 0\n",
+        "votos = (0, 0, 0)\n",
+        "resultado = simular_votacao(*votos)\n",
+        "print(f\"Votos: {votos} -> Esperado: 0 | Calculado: {resultado} {'(OK)' if resultado == 0 else '(FALHA)'}\")"
+      ]
+    }
+  ]
+}
