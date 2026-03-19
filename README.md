@@ -56,5 +56,5 @@ Sou uma profissional multidisciplinar em transição para a área de tecnologia,
 
 ## 📫 Contato
 
-- **Email:** alessandrabjsilva1@gmail.com  
-- **Pronomes:** ela/dela
+- **Email:** alessandra.barbosa@agiltec.com
+- **Portifolio:** www.alessandragalhardo.com.br
